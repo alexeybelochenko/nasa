@@ -3,10 +3,10 @@ import os
 from watson_developer_cloud import TextToSpeechV1
 from generators import heartArr, pressureArr
 
-pulse = 72
+pulse = 65
 age = 37
 mass = 96   
-inp = 122/81
+inp = round((2*int(142)+int(95))/3)
 
 heartArr.pulse_bit()
 pressureArr.pressure_bit()
@@ -74,8 +74,10 @@ def analyse():
         else:
             if inp < normal_pressure:
                 advice = 'It looks like you have psychological instability'
-            elif inp > normal_pressure:
-                advice = 'Attention! You have a critical overpressure. We insist on returning to the residential unit in order to make follow-up recommendations.'
+    elif inp > normal_pressure:
+        advice = 'Attention! You have a critical overpressure. We insist on returning to the residential unit in order to make follow-up recommendations.'
+    elif pulse < 63:
+        advice = 'Attention! Your heart rate is slightly reduced.'
     else:
         advice = 'Your pulse in normal'
 

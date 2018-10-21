@@ -7,7 +7,7 @@ def pulse_bit():
     arr = []
 
     for i in range (1,50):
-        heartArr.append(random.randint(69, 98))
+        heartArr.append(random.randint(69, 75))
 
     with open('../model/data/pulse.txt', 'w') as f:
         for item in heartArr:
