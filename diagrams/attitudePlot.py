@@ -21,7 +21,7 @@ def animate(i):
     pressureData = open('press.txt', 'r').read()
     heartData  = open('array.txt', 'r').read()
     pressureLines = pressureData.split('\n')
-    heartLines = heartData.split('\n')
+    heartLines = heartData.split('\n')`
     xs = []
     ys = []
     for line in pressureLines:
@@ -30,7 +30,6 @@ def animate(i):
             del(arr[0])
             arr[0].split(')')
             arr2 = arr[0].split(')')
-            arrY = arr2[1].split('",')
             arr3 = arr2[0].split(',')
             x1 = arr3[0]
             x2 = arr3[1]
